@@ -67,8 +67,11 @@ body {
 }
 
 .welcome__content {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
+    margin-top: 69.69px;
 }
 
 .welcome__left {
@@ -81,6 +84,7 @@ body {
     color: #FFF;
     font-size: 63px;
     font-weight: 450;
+    line-height: 67%;
 }
 
 .welcome__subtitle {
@@ -96,13 +100,14 @@ body {
 
 .button {
     margin-top: 38.44px;
-    padding: 13.4px 35px;
+    padding: 19px 35px;
 
     color: #DD2020;
     text-align: center;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 67%;
     
     background: #FFF;
     border-radius: 8px;
@@ -156,10 +161,6 @@ body {
     max-width: 194px;
 }
 
-.welcome__info:not(:last-child) {
-    margin-bottom: 48px;
-}
-
 .welcome-info__title {
     position: relative;
 
@@ -167,6 +168,7 @@ body {
     font-size: 34px;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 67%;
 }
 
 .welcome-info__title::after {
@@ -186,8 +188,55 @@ body {
 }
 
 .welcome-info__subtitle {
+    position: relative;
+
+    padding-top: 13px;
+
     color: #FFF;
     font-size: 17px;
     font-weight: 400;
     line-height: 20px;
+}
+
+.welcome__info:not(:last-child) .welcome-info__subtitle {
+    padding-bottom: 48px;
+}
+
+.welcome-info__subtitle::after {
+    position: absolute;
+    top: 50%;
+    right: -37px;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 1px;
+    height: 90%;
+
+    content: "";
+
+    background-color: rgba(255, 255, 255, 0.40);
+}
+
+.welcome__info:first-child .welcome-info__subtitle::before {
+    position: absolute;
+    top: -40px;
+    right: -37px;
+
+    display: block;
+    width: 1px;
+    height: 12px;
+
+    content: "";
+
+    background-color: rgba(255, 255, 255, 0.40);
+}
+
+.welcome__whatsapp {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+}
+
+.welcome-whatsapp__img {
+    width: 49px;
 }
