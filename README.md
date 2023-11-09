@@ -1,3 +1,3 @@
-# qaz-expo-centre-pipe
+# QazExpoCentre Pipe
 
 https://sbeknur.github.io/qaz-expo-centre-pipe/
