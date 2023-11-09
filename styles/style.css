@@ -10,11 +10,10 @@ body {
     width: 100%;
     max-width: 1252px;
     margin: 0 auto;
-    padding: 0 15px;
 }
 
 .welcome {
-    height: 768.5px;
+    padding-bottom: 63.65px;
     background: linear-gradient(180deg, rgba(49, 49, 49, 1) 0%, rgba(49, 49, 49, 0.7712) 16.15%, rgba(49, 49, 49, 0.6) 28.26%), url(../images/header.png) top/cover no-repeat;
 }
 
@@ -22,11 +21,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 42px 0;
+    padding: 42px 15px;
 }
 
-.header__logo {
+.logo {
     width: 150px;
+}
+
+.logo__img {
+    width: 100%;
 }
 
 .menu__list {
@@ -38,6 +41,10 @@ body {
     color: #DFDFDF;
     font-weight: 400;
     text-decoration: none;
+}
+
+.menu__burger {
+    display: none;
 }
 
 .lang__link {
@@ -72,6 +79,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 69.69px;
+    padding: 0 15px;
 }
 
 .welcome__left {
@@ -99,7 +107,6 @@ body {
 }
 
 .button {
-    margin-top: 38.44px;
     padding: 19px 35px;
 
     color: #DD2020;
@@ -111,6 +118,10 @@ body {
     
     background: #FFF;
     border-radius: 8px;
+}
+
+.button-welcome {
+    margin-top: 38.44px;
 }
 
 .welcome__more {
@@ -233,10 +244,171 @@ body {
 
 .welcome__whatsapp {
     position: absolute;
-    bottom: 0;
-    right: -40px;
+    bottom: -40px;
+    right: -20px;
 }
 
 .welcome-whatsapp__img {
     width: 49px;
+}
+
+@media (max-width: 1400px) {
+    .welcome__whatsapp {
+        right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu__list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logo__img {
+        width: 80%;
+    }
+
+    .welcome__left {
+        margin-top: 62px;
+    }
+
+    .welcome__title {
+        font-size: 50.4px;
+    }
+
+    .welcome__subtitle {
+        font-size: 20.8px;
+    }
+
+    .button {
+        font-size: 14.4px;
+    }
+
+    .welcome-more__text {
+        font-size: 11.2px;
+    }
+
+    .welcome-info__title {
+        font-size: 27.2px;
+    }
+
+    .welcome-info__subtitle {
+        font-size: 13.6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome__content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .welcome__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 37.2px;
+
+        text-align: center;
+    }
+    .button-welcome {
+        margin-top: 23px;
+    }
+
+    .welcome__more {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .welcome-more__text {
+        display: none;
+    }
+
+    .welcome__right {
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .welcome__info {
+        text-align: center;
+    }
+
+    .welcome-info__title::after {
+        display: none;
+    }
+
+    .welcome-info__subtitle::after {
+        display: none;
+    }
+
+    .welcome__info:first-child .welcome-info__subtitle::before {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .menu__list {
+        display: none;
+        position: absolute;
+        justify-content: center;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: 100%;
+        backdrop-filter: blur(50px);
+    }
+
+    .menu__burger {
+        position: relative;
+    }
+
+    .menu__burger, .menu__burger::before, .menu__burger::after {
+        display: block;
+        content: "";
+        width: 14px;
+        height: 1px;
+        background-color: white;
+    }
+
+    .menu__burger::before {
+        position: absolute;
+        top: -4px;
+    }
+
+    .menu__burger::after {
+        position: absolute;
+        top: 4px;
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .welcome__content {
+        margin-top: 0;
+    }
+
+    .welcome__title {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .welcome-info__title {
+        font-size: 20px;
+    }
 }
